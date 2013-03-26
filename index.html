@@ -1,18 +1,31 @@
-<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
-<html xmlns='http://www.w3.org/1999/xhtml'>
+<!-- 
+Lotus Lutea v1.0beta tumblr theme
+by chervand.tumblr.com 2013 
+-->
+
+<!DOCTYPE html>
+<html>
 <head>
+  
   <!-- DEFAULT THEME VARIABLES -->
-  <meta name='color:Theme' content='#ffffc0' />
-  <meta name='color:Text' content='#424242' />
-  <meta name='color:Link' content='#6699cc' />
-  <meta name="text:Slogan" content="Music heals."/>
+  <meta name="color:Theme" content="#ffffc0" />
+  <meta name="color:Text" content="#424242" />
+  <meta name="color:Link" content="#6699cc" />
+
+  <!-- USERNAMES -->
+  <meta name="text:Facebook Username" content="" />
+  <meta name="text:Twitter Username" content="" />
+  <meta name="text:Soundcloud Username" content="" />
+  <meta name="text:Youtube Username" content="" />
+  <meta name="text:Github Username" content="" />
 
   <meta name='description' content='{MetaDescription}' />
+
   <title>{Title}</title>
+
   <link rel='icon' href='{Favicon}' />
   <link rel='shortcut icon' href='{Favicon}' />
   <link rel='alternate' type='application/rss+xml' href='{RSS}' />
-  
   <link rel="stylesheet" type="text/css" href="http://twitter.github.com/bootstrap/1.4.0/bootstrap.min.css" />
   <link rel="stylesheet" type="text/css" href="https://raw.github.com/chervand/tumblr-theme-lotus-lutea/master/style.css" />
   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300italic,700&subset=latin,cyrillic-ext" />
@@ -365,12 +378,6 @@
     font-size: 1.6em;
   }
 
-  div#footer {
-    height: 300px;
-    background: #f5f5f5;
-    border: solid 1px #cecece;
-  }
-
   /* Twitter block style */    
   div#twitter {    
     overflow: hidden;
@@ -423,6 +430,46 @@
     -ms-transform:     rotate(90deg); 
     -o-transform:      rotate(90deg); 
   }
+
+    div#footer {
+        text-align: center;
+        border-top: solid 1px #d7d7d7;
+        border-left: none !important;
+        border-right: none !important;
+        padding: 0 !important;
+
+    }
+
+    div#footer .footer-info {
+        float: left;
+        width: 33.33%;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        border-left: none !important;
+        border-right: none !important;
+
+    }
+
+    div#footer .footer-info dl {
+        list-style-type: none;
+        font-size: 0.8em;
+
+    }
+
+    div#footer .footer-info dt {
+        text-align: center;
+        font-weight: bolder;
+
+    }
+    div#footer .footer-info dd {
+        margin: 0;
+
+    }
+
+/*    div#footer #copyright {
+        font-size: 0.8em;
+
+    }*/
 
   /* Tumblr controls style*/
   #tumblr_controls {
@@ -637,10 +684,10 @@
 
  {block:IndexPage}
                 <div class='footer'>
-                  <div class='credits'>
+<!--                   <div class='credits'>
                     <a href='{RSS}'>{lang:RSS}</a> | <a href='/archive'>{lang:Archive}</a> | 
                     Theme: <a href='http://www.tumblr.com/theme/6473'>Optimus</a>
-                  </div>
+                  </div> -->
                   {block:NextPage}
                   <a href='{NextPage}'>&#171; {lang:Older}</a>
                   {/block:NextPage}
@@ -660,10 +707,72 @@
               <!-- </div> -->
             </div>
 
-            <div id="footer" style="text-align:center">
+<!--             <div id="footer" style="text-align:center">
               <p>{Title}</p>
+              <p>{Host}</p>
+            </div> -->
+             
+            <div id="footer">
+            <div class="footer-info">
+                <dl>
+                    <dt>{lang:All of Tumblr}</dt>
+                    <dd><a href="/">{lang:Home}</a></dd>
+                    <dd><a href="/archive">{lang:Archive}</a></dd>
+                    <dd><a href="{RSS}">{lang:RSS}</a></dd>
+                </dl>
             </div>
-             {/block:IndexPage}
+            <div class="footer-info">
+                <dl>
+                    <dt>Contacts</dt>
+                    {block:IfFacebookUsername}
+                    <dd>
+                      <a href="http://www.facebook.com/{text:Facebook Username}">
+                        facebook.com/{text:Facebook Username}
+                      </a>
+                    </dd>
+                    {/block:IfFacebookUsername}
+                    {block:IfTwitterUsername}
+                    <dd>
+                      <a href="http://twitter.com/{text:Twitter Username}">
+                        twitter.com/{text:Twitter Username}
+                      </a>
+                    </dd>
+                    {block:IfTwitterUsername}
+                    {block:IfSoundcloudUsername}
+                    <dd>
+                      <a href="http://soundcloud.com/{text:Soundcloud Username}">
+                        soundcloud.com/{text:Soundcloud Username}
+                      </a>
+                    </dd>
+                    {block:IfSoundcloudUsername}
+                    {block:IfYoutubeUsername}
+                    <dd>
+                      <a href="http://www.youtube.com/user/{text:Youtube Username}">
+                        youtube.com/user/{text:Youtube Username}
+                      </a>
+                    </dd>
+                    {block:IfYoutubeUsername}
+                    {block:IfGithubUsername}
+                    <dd>
+                      <a href="https://github.com/{text:Github Username}">
+                        github.com/{text:Github Username}
+                      </a>
+                    </dd>
+                    {block:IfGithubUsername}
+                </dl>
+            </div>
+            <div class="footer-info">
+                <dl>
+                    <dt>{lang:About}</dt>
+                    <dd>{Title}</dd>
+                    <dd>Theme: Lotus Lutea v1.0beta</dd>
+                    <dd>{lang:Powered by Tumblr}</dd>
+                    <dd>&copy {Host}</dd>
+                </dl>
+            </div>
+            <!-- <span id="copyright">&copy username.tumblr.com</span> -->
+        </div>
+        {/block:IndexPage}
           </div>
         </div>
 

@@ -1,4 +1,5 @@
-tumblr
+tumblr-theme-lotus-lutea
 ======
 
-Tumblr Theme
+Lotus Lutea v1.0beta tumblr theme
+chervand.tumblr.com
