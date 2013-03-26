@@ -1,0 +1,410 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+  <!-- DEFAULT THEME VARIABLES -->
+  <meta name='color:Theme' content='#ffffc0' />
+  <meta name='color:Text' content='#424242' />
+  <meta name='color:Link' content='#6699cc' />
+  <meta name="text:Slogan" content="Music heals."/>
+
+  <meta name='description' content='{MetaDescription}' />
+  <title>{Title}</title>
+  <link rel='icon' href='{Favicon}' />
+  <link rel='shortcut icon' href='{Favicon}' />
+  <link rel='alternate' type='application/rss+xml' href='{RSS}' />
+  
+  <link rel="stylesheet" type="text/css" href="http://twitter.github.com/bootstrap/1.4.0/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="https://raw.github.com/chervand/tumblr-theme-lotus-lutea/master/style.css" />
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300italic,700&subset=latin,cyrillic-ext" />
+  
+  <style type="text/css"></style>
+</head>
+
+<body>
+
+  <!--     <div id="fb-root"></div> -->
+<!-- Facebook coments
+    <script>
+    (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+    </script>
+  -->
+
+  <div id="qrcode">
+    <!-- <a href="/" title="{Title}"> -->
+    <img src="http://api.qrserver.com/v1/create-qr-code/?data=http%3A%2F%2Fchervand.tumblr.com&size=100x100&color=424242"/>
+    <!-- </a> -->
+  </div>
+
+  <div class="topbar">
+    <div class="fill">
+      <div id="tagCloud">
+<!--         music portfolio tumblr guitar css web design metal html5 jquery php paint your own enso 
+        prague djent euroblast it esoteric books javascript css3 shure gigabyte picks strings
+        extra words -->
+      </div>
+
+        <!-- <div class="container">
+            <a class="brand" href="/">{Title}</a>
+            <ul class="nav">
+                {block:HasPages} 
+                    {block:Pages}
+                        <li><a href='{URL}'>{Label}</a></li>
+                    {/block:Pages}
+                {/block:HasPages}
+            </ul>
+          </div> -->
+        </div>
+      </div>
+            <div id="topscroll">
+        <a href="#" id="top">Scroll to the top.</a>
+      </div>
+
+      <div class="container">
+        <div class="content">
+          <a id="homeLink" class="title" href="/">home</a>
+           {block:IndexPage}
+          <a id="infoLink" class="title" href="#">info</a>
+         
+          <div class="page-header">                   
+            {block:Twitter}
+            <div id="twitter" >
+              <div id="go">
+                <div id="showMore">More</div>
+              </div>
+              <div id="tweets"></div>
+            </div>
+            {/block:Twitter}
+          </div>
+          <!-- <div id="slogan">{text:Slogan}</div> -->
+          {/block:IndexPage}
+          
+          
+          <div id="wrapper"class="row">
+            <!-- <div id='wrapper'> -->
+            <div id='posts'>
+
+              {block:Posts}
+
+              <div class='postInfo'>
+                <a href='{Permalink}'>
+                  {ShortMonth} {DayOfMonth} {Year}
+                  <br />
+                  <span>{TimeAgo}</span>
+                </a>
+                                      {block:HasTags}
+                      <br /><br />
+                      {block:Tags}
+                      <a class="postTag" href='{TagURL}'>#{Tag}</a>
+                      {/block:Tags}
+                      {/block:HasTags}
+<!--                       <br /><br />
+                      <a href="{Permalink}" title="View entire page">{NoteCountWithLabel}</a> -->
+              </div>
+
+              <div class='postWrapper'>
+                <div class='postContainer'>
+                  <div class='post'>
+                    {block:Text}
+                    {block:Title}<h3>{Title}</h3>{/block:Title}
+                    {Body}
+                    {/block:Text}
+                    
+                    {block:Photo}
+                    {LinkOpenTag}<img src='{PhotoURL-HighRes}' alt='{PhotoAlt}'/>{LinkCloseTag}
+                    {block:Caption}<p>{Caption}</p>{/block:Caption}
+                    {/block:Photo}
+                    
+                    {block:Photoset}
+                    {Photoset-500}
+                    {block:Caption}<p>{Caption}</p>{block:Caption}
+                    {/block:Photoset}
+                    
+                    {block:Quote}
+                    <p class='quote'>"{Quote}"</p>
+                    {block:Source}<p>{Source}</p>{/block:Source}
+                    {/block:Quote}
+
+                    {block:Link}
+                    <a href='{URL}' class='link' {Target}>{Name}</a>
+                    {block:Description}<p>{Description}</p>{/block:Description}
+                    {/block:Link}
+
+                    {block:Chat}
+                    {block:Title}<h3>{Title}</h3>{/block:Title}
+                    <table cellpadding='0' cellspacing='0' width='100%' border='0' class='chat'>
+                      {block:Lines}
+                      <tr class='{Alt}'>
+                        {block:Label}
+                        <td class='label'>{Label}</td>
+                        {/block:Label}
+                        <td>{Line}</td>
+                      </tr>
+                      {/block:Lines}
+                    </table>
+                    {/block:Chat}
+
+                    {block:Audio}
+                                        {block:AudioEmbed} 
+{AudioEmbed-640}
+                    {/block:AudioEmbed} 
+<!--                     {block:AlbumArt}
+                    <img src='{AlbumArtURL}' />
+                    <br class="clear" />
+                    <br class="clear" />
+
+                    {/block:AlbumArt}                            
+                    <div class='audio'>                                
+                      <div class='audioLeft'>
+                        {AudioPlayerWhite}
+                      </div>
+                      <div class='audioRight'>
+                        {FormattedPlayCount} Plays
+                      </div>
+                      <br class='clear' />
+                    </div> -->
+                    {block:Caption}<p>{Caption}</p>{/block:Caption}
+                    {/block:Audio}
+
+                    {block:Video}
+                    {VideoEmbed-500}
+                    {block:Caption}
+                    <p>{Caption}</p>
+                    {/block:Caption}
+                    {/block:Video}
+
+                  </div>
+
+
+<!--                   <div class='insideInfo'>
+                    <div class='postTags'>
+                      Posted {TimeAgo}
+                      {block:HasTags}
+                      <br />
+                      {block:Tags}
+                      <a href='{TagURL}'>#{Tag}</a>
+                      {/block:Tags}
+                      {/block:HasTags}
+                    </div>
+                    <div class='postNotes'>
+                      <a href="{Permalink}" title="View entire page">{NoteCountWithLabel} | 
+                        <fb:comments-count href={Permalink}></fb:comments-count> comments</a>
+                      </div>
+                      <br class='clear' />
+                    </div> -->
+
+                  </div>
+                </div>
+                {block:PostNotes}
+                <div class='postInfo'>&nbsp;</div>
+                <div class='postWrapper'>
+                  <div class='postContainer'>
+                    <div class='postNote'>
+                      {block:Posts}
+                      {PostNotes}
+                      {/block:Posts}
+                    </div>
+                  </div>
+                </div>
+                {/block:PostNotes}
+                {block:PermalinkPage}
+                <div class="fb-comments" data-href="{Permalink}" data-num-posts="2" data-width="522" colorscheme="light"></div>
+                {/block:PermalinkPage}
+                {/block:Posts}
+
+
+
+
+ {block:IndexPage}
+                <div class='footer'>
+                  <div class='credits'>
+                    <a href='{RSS}'>{lang:RSS}</a> | <a href='/archive'>{lang:Archive}</a> | 
+                    Theme: <a href='http://www.tumblr.com/theme/6473'>Optimus</a>
+                  </div>
+                  {block:NextPage}
+                  <a href='{NextPage}'>&#171; {lang:Older}</a>
+                  {/block:NextPage}
+                  {block:PreviousPage}
+                  {block:NextPage}
+                  |
+                  {block:NextPage}
+                  {/block:PreviousPage}
+                  {block:PreviousPage}
+                  <a href='{PreviousPage}'>{lang:Newer} &#187;</a>
+                  {/block:PreviousPage}
+                </div>
+
+
+
+              </div>
+              <!-- </div> -->
+            </div>
+
+            <div id="footer" style="text-align:center">
+              <p>{Title}</p>
+            </div>
+             {/block:IndexPage}
+          </div>
+        </div>
+
+        <!-- Scripts starting here -->
+        <script src='//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js'></script>
+       <script type="text/javascript" src="http://post-theory.com/public/tagcloud/chervand?sort=alphabetical&maxsize=150&math=linear&fontsize=1em&case=lower&nowrap=soft&pad=4" async="async"></script>
+
+        <!-- Template scripts -->
+        <script type="text/javascript">
+
+        $(document).ready(function(){
+
+          /* Initial height of the tweets block */
+          var twitHeight = $("div#twitter").height();
+
+          /* Initial height of the header block */
+          var headHeight = $("div.topbar").height();
+
+          /* Initial height of the container */
+          var contWidth = $('div.container').width();
+
+          /* Initial width of the QR Code block */
+          var qrWidth = $('div#qrcode').width();
+
+          /* Initial padding-top of the body */
+          var bodyPad = parseInt($('body').css('padding-top'));
+
+          /*if (window.console) {
+            console.log(contWidth+(qrWidth*3));
+          }*/
+
+          /*jQuery('div#cloud').tumblrTagCloud({
+            url: 'http://chervand.tumblr.com',
+            sortBy: 'alpha'
+          });*/
+
+          /* Change padding-top for the body on the widow width change */
+          function fitBody() {
+            if ($(window).width() < contWidth+(qrWidth*3) && $('body').css('padding-top') === bodyPad + 'px') {
+              $('body').animate({
+                paddingTop: qrWidth + bodyPad
+              });
+            } else if ($(window).width() >= contWidth+(qrWidth*3) && $('body').css('padding-top') === bodyPad + qrWidth + 'px') {
+              $('body').animate({
+                paddingTop: bodyPad
+              });
+
+            } 
+          }
+          fitBody();
+          $(window).resize(fitBody);
+
+          /* Extend tweets block to the auto height and back */
+          $("#go").click(function(){
+            if ($("div#twitter").css("height") === twitHeight + "px") {
+              $("div#twitter").animate({
+                height: $('div#tweets').height()
+              }, 1500 );
+              $("div#showMore").replaceWith('<div id="showMore">Less</div>');
+            } else {
+              $("div#twitter").animate({
+                height: twitHeight + "px"
+              }, 1500 );
+              $("div#showMore").replaceWith('<div id="showMore">More</div>');
+            }
+          });
+
+          /* Show/hide "Show more tweets" button on hover */
+          $("div#twitter").hover( /* Read about hover method */
+            function(){
+              $("div#go").fadeIn("fast");
+            }, 
+            function(){
+              $("div#go").fadeOut("fast");
+            }
+            );
+
+          /* Show topbar on mouse enter the QR */
+
+  /*$("div#qrcode").mouseenter(function(){
+      $("div.topbar").fadeIn();
+    });*/
+
+/* Hide topbar on mouse leave */
+$("div.topbar").mouseleave(function(){
+  $("div.topbar").fadeOut();
+});
+
+/* Show/hide topbar on click */
+$("div#qrcode").click(function(){
+  $("div.topbar").fadeToggle();
+});
+
+/* Show header on scroll and hide on the top */
+$(window).scroll(function(){
+  if ($(window).scrollTop() > headHeight*3) {
+    $("div.topbar").fadeIn("slow");
+  } else {
+    $("div.topbar").fadeOut("slow");
+  }
+});
+
+$('a#top').click(function(){
+  $("html, body").animate({ scrollTop: 0 }, 1000);
+  return false;
+});
+
+$('a#infoLink').click(function(){
+
+$('html, body').animate({
+         scrollTop: $("#footer").offset().top
+     }, 2000); 
+      
+
+});
+
+});
+
+</script>
+
+<!-- Show recent tweets -->
+<!-- TODO: Reneder selected jquery scripts only on Index page -->
+{block:Twitter}
+<script type="text/javascript">
+function recent_tweets(data) {
+  for (i=0; i<data.length; i++) {
+    document.getElementById("tweets").innerHTML =
+    document.getElementById("tweets").innerHTML + 
+    '<div class="tweet"> \
+    <a href="http://twitter.com/{TwitterUsername}/status/' + (data[i].id_str ? data[i].id_str : data[i].id) + '" title="Go to the Twitter" target="_blank"> \
+    <img src="https://twitter.com/images/resources/twitter-bird-light-bgs.png" class="twitpic"/> \
+    <div class="twittext">' + data[i].text + '</div> \
+    </a> \
+    </div>';
+  }
+}
+</script>
+<script type="text/javascript" src="/tweets.js"></script>
+{/block:Twitter}
+
+
+<!-- Google analytics -->
+<!-- TODO: Update script -->
+<!-- 
+<script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-27859777-1']);
+    _gaq.push(['_setDomainName', 'chervand.com']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+</script>
+-->
+</body>
+</html>
