@@ -17,7 +17,422 @@
   <link rel="stylesheet" type="text/css" href="https://raw.github.com/chervand/tumblr-theme-lotus-lutea/master/style.css" />
   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300italic,700&subset=latin,cyrillic-ext" />
   
-  <style type="text/css"></style>
+  <style type="text/css">
+
+  /* Post block styles */ 
+  .postInfo {
+    width: 140px;
+    float: right;
+    padding: 8px;
+  }
+  .postInfo a,
+  .postInfo a:hover {
+    color:#424242;
+    font-size: 1.4em;
+  }
+  .postInfo span,
+  .postInfo span a,
+  .postInfo span a:hover {
+    color:#cecece;
+  }
+  .postWrapper {
+    width:660px;
+    float: right;
+    margin:0 0 15px 0;
+    border-right:5px solid #f8f8f8;
+
+  }
+  .postContainer {
+    border-right:1px solid #d7d7d7;
+    border-bottom:1px solid #d7d7d7;
+    min-height: 200px;
+  }
+  .post {
+    padding:10px 10px 0 10px;
+  }
+  .post img {
+    width:640px;
+    display: block;
+    margin: auto;
+  }
+  .postTag {
+    font-size: .8em !important;
+  }
+  .postNote {
+    padding:10px;
+  }
+  .insideInfo {
+    background:#f8f8f8;
+    border-top:1px solid #eee;
+    padding:5px 10px;
+    font-size:0.8em;
+    color:#888;
+  }
+  .insideInfo .postTags {
+    width:350px;
+    float:left;
+  }
+  .insideInfo .postTags a {
+    color:#aaa;
+  }
+  .insideInfo .postNotes {
+    width:150px;
+    float:left;
+    text-align:right;
+  }
+  p.quote {
+    font-size:1.3em;
+    margin:0 0 10px 0;
+    border-left:4px solid #d7d7d7;
+    padding:0 0 0 6px;
+  }
+  .chat {
+    margin:0 0 10px 0;
+  }
+  .chat td {
+    padding:5px 8px;
+  }
+  .chat td.label {
+    text-align:right;
+    font-weight:bold;
+  }
+  .chat tr.odd td {
+    background:#f8f8f8;
+    border-bottom:1px solid #eee;
+  }
+  .chat tr.even td {
+    background:#fff;
+  }
+  .audio {
+    margin: auto;
+    width:100%;
+    border:1px solid #eee;
+    border-radius:5px;
+    -moz-border-radius:5px;
+    -webkit-border-radius:5px;
+    background: #222; /* #f8f8f8; */
+  }
+  .audioLeft {
+    width:48%;
+    float:left;
+    margin:5px;
+    padding:5px;
+    border:1px solid #eee;
+    border-radius:5px;
+    -moz-border-radius:5px;
+    -webkit-border-radius:5px;
+    background:#fff;
+  }
+  .audioRight {
+    width:40%;
+    float:left;
+    margin: auto;
+    text-align:center;
+    padding:13px 0;
+    font-size:1.2em;
+    color: #ddd;
+  }
+  .footer {
+    color:#cecece;
+    padding:0 0 0 116px;
+    font-size:0.8em;
+    font-weight:bold;
+  }
+  .clear {
+    clear:both;
+  }
+  ol.notes,
+  ol.notes li {
+    padding:0;
+    margin:0;
+    list-style-type:none;
+  }
+  ol.notes li.note {
+    padding:2px 0;
+    font-size:0.8em;
+  }
+  ol.notes li.note img.avatar {
+    vertical-align:-8px;
+    margin-right:5px;
+    width:16px;
+    height:16px;
+    padding:2px;
+    border:1px solid #d7d7d7;
+  }
+  ol.notes li.note blockquote a {
+    text-decoration:none;
+  }
+
+  .credits {
+    float:right;
+    text-align:right;
+    padding:0 16px 0 0;
+    font-weight:normal;
+  }
+  .content .span10 {
+    width: 680px;
+  }
+  .fb-comments {
+    margin-left: 105px;
+  }
+
+  /* General template style */
+  ::selection {
+    background:#FFFFC0;
+    color:#424242;
+  }
+  ::-moz-selection {
+    background:#FFFFC0;
+    color:#424242;
+  }
+  * {
+    outline:none;
+  }
+  body {
+    background-color:#fff;
+    font: 14pt 'Open Sans Condensed', sans-serif;
+    line-height:140%;
+    color:#424242;
+    margin: 0;
+    padding-top: 30px;
+  }
+  a img {
+    border:none;
+  }
+  a {
+    text-decoration:none;
+    color: {color:Link};
+  }
+  a:hover {
+    color:#424242;
+  }
+  h1 {
+    margin:0;
+    padding:0 0 10px 0;
+    font-size:2em;
+  }
+  h3 {
+    margin:0 0 8px 0;
+    padding:0;
+    font-size:1.1em;
+  }
+  p {
+    margin:10px 0;
+    padding:0;
+    font-size: 1em;
+    line-height:140%;
+  }
+
+  /* Header block style */
+  div#qrcode {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    margin: 8px;
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+  }
+  div.topbar {
+    width: 100%;
+    height: 116px;
+    background: #424242;
+    position: fixed;
+    top: 0;
+    z-index: 8;
+    display: none;
+    opacity: 0.95;
+    overflow: auto;
+    min-width: 940px;
+  }
+  div.topbar div.fill {
+    width: 100%;
+    height: 116px;
+    position: fixed;
+    top: 0;
+    z-index: 9;
+  }
+
+  div#tagCloud {
+    background: none;
+    width: 300px;
+    height: 108px;
+    overflow: hidden;
+    float: left;
+    position: absolute;
+    margin-left: 116px;
+    margin-top: 4px;
+
+  }
+
+  div#tagCloud a {
+    text-decoration: none;
+    -webkit-transition: all .18s ease-out;
+    -moz-transition: all .18s ease-out;
+    -ms-transition: all .18s ease-out;
+    -o-transition: all .18s ease-out;
+    transition: all .18s ease-out;
+    color: {color:Theme};
+  }
+
+  div#tagCloud a:hover {
+    text-decoration: underline;
+    color: {color:Link};
+  }
+
+  div#topscroll {
+    width: 116px;
+    text-align: center;
+    position: fixed;
+    bottom: 20px;
+  }
+  a#top {
+    text-decoration: underline;
+    color: white;
+    opacity: .8;
+    font-size: .9em;
+    -webkit-transition: all .18s ease-out;
+    -moz-transition: all .18s ease-out;
+    -ms-transition: all .18s ease-out;
+    -o-transition: all .18s ease-out;
+    transition: all .18s ease-out;
+    color: {color:Link};
+  }
+  a#top:hover{
+    text-decoration: underline;
+    color: {color:Text};
+    font-size: .95em;
+    background: {color:Theme};
+    opacity: .95;
+  }
+
+  #header {
+    background:#f8f8f8;
+    border-bottom:1px solid #eee;
+    padding:15px 0;
+    margin:0 0 20px 0;
+  }
+  #headerContent {
+    width:632px;
+    margin:0 auto;
+  }
+  #headerContent h1 a {
+    color:#424242;
+  }
+  #headerContent h1,
+  #headerContent p {
+    padding:0;
+    margin:0;
+  }
+  #headerContent p {
+    padding-top:10px;
+  }
+
+  /* Grid style */
+  div#wrapper {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 17px;
+    /*width: 660px;*/
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  div.container {
+    width: 880px;
+  }
+  a.title {
+    font-size: 1.6em;
+    text-decoration: underline;
+    font-style: italic;
+    margin-right: 4px;
+    -webkit-transition: all .18s ease-out;
+    -moz-transition: all .18s ease-out;
+    -ms-transition: all .18s ease-out;
+    -o-transition: all .18s ease-out;
+    transition: all .18s ease-out;
+    color: {color:Link};
+  }
+
+  a.title:hover {
+    color: {color:Text};
+    background: {color:Theme};
+  }
+
+  div#slogan {
+    text-align: center;
+    margin: 10px;
+    font-size: 1.6em;
+  }
+
+  div#footer {
+    height: 300px;
+    background: #f5f5f5;
+    border: solid 1px #cecece;
+  }
+
+  /* Twitter block style */    
+  div#twitter {    
+    overflow: hidden;
+    position: relative; /* Hides absolute tweetpics */
+    height: 120px;
+    padding: 5px;
+    font-size: .9em;
+    display: block;
+    /*border-bottom: solid 1px {color:Text};*/
+  }
+  div#tweets {
+    height: auto;
+    color: {color:Text};
+  }
+  div.tweet {
+    margin-bottom: 4px;
+  }
+  img.twitpic {
+    width: 25px;
+    opacity: 0.2;
+    position: absolute;
+  }
+  img.twitpic:hover {
+    opacity: 1.0;
+  }
+  div.twittext {
+    margin-left: 25px;
+    color: {color:Text};
+  }
+  div#go {
+    float:right;
+    width: 90px;
+    opacity: 0.95;
+    height: 100%;
+    z-index: 5;
+    position: absolute;
+    right: 0;
+    top: 0;
+    cursor: pointer;
+    display: none;
+    background: {color:Theme};
+  }
+  div#showMore {
+    /*right: -60px;*/
+    top: 45px;
+    position: absolute;
+    font-size: 3.0em;
+    -webkit-transform: rotate(90deg); 
+    -moz-transform:    rotate(90deg); 
+    -ms-transform:     rotate(90deg); 
+    -o-transform:      rotate(90deg); 
+  }
+
+  /* Tumblr controls style*/
+  #tumblr_controls {
+    z-index: 0 !important;
+    /*position: fixed !important;
+    top: 10px !important;
+    right: 30px !important;*/
+  }
+  {CustomCSS}
+  </style>
 </head>
 
 <body>
@@ -252,122 +667,10 @@
           </div>
         </div>
 
-        <!-- Scripts starting here -->
-        <script src='//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js'></script>
-       <script type="text/javascript" src="http://post-theory.com/public/tagcloud/chervand?sort=alphabetical&maxsize=150&math=linear&fontsize=1em&case=lower&nowrap=soft&pad=4" async="async"></script>
-
-        <!-- Template scripts -->
-        <script type="text/javascript">
-
-        $(document).ready(function(){
-
-          /* Initial height of the tweets block */
-          var twitHeight = $("div#twitter").height();
-
-          /* Initial height of the header block */
-          var headHeight = $("div.topbar").height();
-
-          /* Initial height of the container */
-          var contWidth = $('div.container').width();
-
-          /* Initial width of the QR Code block */
-          var qrWidth = $('div#qrcode').width();
-
-          /* Initial padding-top of the body */
-          var bodyPad = parseInt($('body').css('padding-top'));
-
-          /*if (window.console) {
-            console.log(contWidth+(qrWidth*3));
-          }*/
-
-          /*jQuery('div#cloud').tumblrTagCloud({
-            url: 'http://chervand.tumblr.com',
-            sortBy: 'alpha'
-          });*/
-
-          /* Change padding-top for the body on the widow width change */
-          function fitBody() {
-            if ($(window).width() < contWidth+(qrWidth*3) && $('body').css('padding-top') === bodyPad + 'px') {
-              $('body').animate({
-                paddingTop: qrWidth + bodyPad
-              });
-            } else if ($(window).width() >= contWidth+(qrWidth*3) && $('body').css('padding-top') === bodyPad + qrWidth + 'px') {
-              $('body').animate({
-                paddingTop: bodyPad
-              });
-
-            } 
-          }
-          fitBody();
-          $(window).resize(fitBody);
-
-          /* Extend tweets block to the auto height and back */
-          $("#go").click(function(){
-            if ($("div#twitter").css("height") === twitHeight + "px") {
-              $("div#twitter").animate({
-                height: $('div#tweets').height()
-              }, 1500 );
-              $("div#showMore").replaceWith('<div id="showMore">Less</div>');
-            } else {
-              $("div#twitter").animate({
-                height: twitHeight + "px"
-              }, 1500 );
-              $("div#showMore").replaceWith('<div id="showMore">More</div>');
-            }
-          });
-
-          /* Show/hide "Show more tweets" button on hover */
-          $("div#twitter").hover( /* Read about hover method */
-            function(){
-              $("div#go").fadeIn("fast");
-            }, 
-            function(){
-              $("div#go").fadeOut("fast");
-            }
-            );
-
-          /* Show topbar on mouse enter the QR */
-
-  /*$("div#qrcode").mouseenter(function(){
-      $("div.topbar").fadeIn();
-    });*/
-
-/* Hide topbar on mouse leave */
-$("div.topbar").mouseleave(function(){
-  $("div.topbar").fadeOut();
-});
-
-/* Show/hide topbar on click */
-$("div#qrcode").click(function(){
-  $("div.topbar").fadeToggle();
-});
-
-/* Show header on scroll and hide on the top */
-$(window).scroll(function(){
-  if ($(window).scrollTop() > headHeight*3) {
-    $("div.topbar").fadeIn("slow");
-  } else {
-    $("div.topbar").fadeOut("slow");
-  }
-});
-
-$('a#top').click(function(){
-  $("html, body").animate({ scrollTop: 0 }, 1000);
-  return false;
-});
-
-$('a#infoLink').click(function(){
-
-$('html, body').animate({
-         scrollTop: $("#footer").offset().top
-     }, 2000); 
-      
-
-});
-
-});
-
-</script>
+<!-- Scripts starting here -->
+<script src='//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js'></script>
+<script type="text/javascript" src="http://post-theory.com/public/tagcloud/chervand?sort=alphabetical&maxsize=150&math=linear&fontsize=1em&case=lower&nowrap=soft&pad=4" async="async"></script>
+<script src="//raw.github.com/chervand/tumblr-theme-lotus-lutea/master/script.js"></script>
 
 <!-- Show recent tweets -->
 <!-- TODO: Reneder selected jquery scripts only on Index page -->
@@ -389,7 +692,6 @@ function recent_tweets(data) {
 <script type="text/javascript" src="/tweets.js"></script>
 {/block:Twitter}
 
-
 <!-- Google analytics -->
 <!-- TODO: Update script -->
 <!-- 
@@ -404,7 +706,7 @@ function recent_tweets(data) {
         ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
         var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
     })();
-</script>
--->
+</script>-->
+
 </body>
 </html>
