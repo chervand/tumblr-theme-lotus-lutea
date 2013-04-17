@@ -1,0 +1,337 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>13 tweets</title>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300italic,700&subset=latin,cyrillic-ext' rel='stylesheet' type='text/css'>
+    <style type='text/css'>
+        body {
+            background-color:#fff;
+            font-size:14pt;
+            font-family: 'Open Sans Condensed', sans-serif;
+            line-height:140%;
+            color:#424242;
+            margin: 0;
+            padding-top: 30px;
+        }
+        div#wrapper {
+            width: 880px;
+            margin: auto;
+        }
+        div#twitter {
+            border-bottom: solid 2px #424242;
+            overflow: hidden;
+            position: relative; /* Hides absolute tweetpics */
+            height: 120px;
+            padding: 5px;
+        }
+        div#tweets {
+            height: auto;
+        }
+        div.tweet {
+            margin-bottom: 7px;
+        }
+        div#go {
+            float:right;
+            background: yellow;
+            width: 100px;
+            opacity: 0.5;
+            height: 100%;
+            z-index: 5;
+            position: absolute;
+            right: 0;
+            top: 0;
+            cursor: pointer;
+            display: none;
+        }
+
+        #show-tweets-icon {
+            margin: auto;
+        }
+        p.rotate {
+            right: -70px;
+            top: -50px;
+            position: absolute;
+            font-size: 3.2em;
+            /* Rotate from top left corner (not default) */
+            -webkit-transform-origin: 0 0;
+            -moz-transform-origin:    0 0;
+            -ms-transform-origin:     0 0;
+            -o-transform-origin:      0 0;
+            -webkit-transform: rotate(90deg);
+            -moz-transform:    rotate(90deg);
+            -ms-transform:     rotate(90deg);
+            -o-transform:      rotate(90deg);
+        }
+        div#content {
+            text-align: center;
+            margin: 10px;
+            font-size: 1.6em;
+        }
+        div.topbar {
+            width: 100%;
+            height: 116px;
+            background: #424242;
+            position: fixed;
+            top: 0;
+            z-index: 9;
+            display: none;
+            /*opacity: 0.8;*/
+            /*padding: 5px 5px 5px 118px;*/
+            overflow: auto;
+        }
+        div#qrcode {
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 10;
+            margin: 8px;
+            cursor: pointer;
+            width: 100px;
+        }
+        div#tumblrTagCloud {
+            background: none;
+            width: 300px;
+            height: 108px;
+            /*border: solid 1px yellow;*/
+            color: yellow;
+            /*font-size: 0.8em;*/
+            overflow: hidden;
+            float: left;
+            position: absolute;
+            margin-left: 116px;
+            margin-top: 4px;
+        }
+        div#topscroll {
+            width: 116px;
+            text-align: center;
+            float:right;
+        }
+        a#top {
+            text-decoration: none;
+            color: white;
+            opacity: .5;
+        }
+        a#top:hover{
+            text-decoration: underline;
+            color: yellow;
+            opacity: .9;
+        }
+
+        div#footer {
+            margin-bottom: 10px;
+            border: none !important;
+            padding: 0 !important;
+            text-align: center;
+
+        }
+
+        div#footer .footer-info {
+            float: left;
+            border: none;
+            width: 33.33%;
+            height: 200px;
+            margin: 0 !important;
+
+        }
+
+        div#footer .footer-info dl {
+            list-style-type: none;
+            font-size: 0.8em;
+
+        }
+
+        div#footer .footer-info dt {
+            text-align: center;
+            font-weight: bolder;
+
+        }
+        div#footer .footer-info dd {
+            margin: 0;
+
+        }
+
+        div#footer #copyright {
+            font-size: 0.8em;
+
+        }
+
+    </style>
+</head>
+<body>
+<div id="qrcode">
+    <img src="http://api.qrserver.com/v1/create-qr-code/?data=http%3A%2F%2Fchervand.tumblr.com&size=100x100&color=424242"/>
+</div>
+<div class="topbar">
+    <div id="tumblrTagCloud">
+        music portfolio tumblr guitar css web design metal html5 jquery php paint your own enso
+        prague djent euroblast it esoteric books javascript css3 shure gigabyte picks strings
+        extra words
+    </div>
+    <div id="topscroll">
+        <a href="#" id="top">Scroll to the top.</a>
+    </div>
+    <!-- <h2>Header here</h2> -->
+</div>
+<div id="wrapper">
+    <h1>13 tweets | 13 твитов</h1>
+    <div id="twitter">
+        <div id="go">
+            <!--<p class="rotate">Show</p>-->
+            <div id="show-tweets-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+                    <path   d="M 0,0 50,50 100,0"
+                            style="
+                            fill:none;
+                            stroke:#000000;
+                            stroke-width:30;
+                            stroke-linecap:butt;
+                            stroke-linejoin:miter;
+                            stroke-miterlimit:4;
+                            stroke-opacity:1;
+                            stroke-dasharray:none;"
+                            transform="scale(.50)" ></path>
+                </svg>
+            </div>
+        </div>
+        <div id="tweets">
+            <script type="text/javascript">
+                for (var i = 13; i >= 1; i--) {
+                    document.write("<div class='tweet'>This is a sample tweet extended text which has a number " + i + ". Some extra words making line longer #hashtag.</div>");
+                };
+            </script>
+        </div>
+    </div>
+    <div id="content">
+        Some page content here.<br><br>
+        <iframe width="640" height="360" src="http://www.youtube.com/embed/lVjykzmFsqk?feature=player_detailpage" frameborder="0" allowfullscreen></iframe>
+
+    </div>
+    <div id="footer">
+        <div class="footer-info">
+            <dl>
+                <dt>Tumblr</dt>
+                <dd><a href="#">Home</a></dd>
+                <dd><a href="#">Archive</a></dd>
+                <dd><a href="#">RSS</a></dd>
+            </dl>
+        </div>
+        <div class="footer-info">
+            <dl>
+                <dt>Contacts</dt>
+                <dd><a href="#">facebook.com/username</a></dd>
+                <dd><a href="#">twitter.com/username</a></dd>
+                <dd><a href="#">soundcloud.com/username</a></dd>
+            </dl>
+        </div>
+        <div class="footer-info">
+            <dl>
+                <dt>About</dt>
+                <dd>Theme: Lotus Lutea v1.0beta</dd>
+            </dl>
+        </div>
+        <span id="copyright">&copy username.tumblr.com</span>
+    </div>
+</div>
+
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script src="script.js"></script>
+
+<!--<script type="text/javascript">
+
+    $(document).ready(function(){
+
+        /* Initial height of the tweets block */
+        var twitHeight = $("div#twitter").height();
+
+        /* Initial height of the topbar block */
+        var headHeight = $("div#topbar").height();
+
+        /* Initial height of the topbar block */
+        var wrapWidth = $('div#wrapper').width();
+
+        /* Initial width of the QR Code block */
+        var qrWidth = $('div#qrcode').width();
+
+        /* Initial padding-top of the body */
+        var bodyPad = parseInt($('body').css('padding-top'));
+
+        /*if (window.console) {
+         console.log('QR Width: ' + qrWidth);
+         }*/
+
+        /*$('div#cloud').tumblrTagCloud({url: 'http://username.tumblr.com'});*/
+
+        /* Change padding-top for the body on the widow width change */
+        function fitBody() {
+            if ($(window).width() < wrapWidth+(qrWidth*2) && $('body').css('padding-top') === bodyPad + 'px') {
+                $('body').animate({
+                    paddingTop: qrWidth + bodyPad
+                });
+            } else if ($(window).width() >= wrapWidth+(qrWidth*2) && $('body').css('padding-top') === bodyPad + qrWidth + 'px') {
+                $('body').animate({
+                    paddingTop: bodyPad
+                });
+
+            }
+        }
+        fitBody();
+        $(window).resize(fitBody);
+
+        /* Extend tweets block to the auto height and back */
+        $("#go").click(function(){
+            if ($("div#twitter").css("height") === twitHeight + "px") {
+                $("div#twitter").animate({
+                    height: $('div#tweets').height()
+                }, 1500 );
+            } else {
+                $("div#twitter").animate({
+                    height: twitHeight + "px"
+                }, 1500 );
+            }
+        });
+
+        /* Show/hide "Show more tweets" button on hover */
+        $("div#twitter").hover( /* Read about hover method */
+                function(){
+                    $("div#go").fadeIn("fast");
+                },
+                function(){
+                    $("div#go").fadeOut("fast");
+                }
+        );
+
+        /* Show topbar on mouse enter the QR */
+        /*$("div#qrcode").mouseenter(function(){
+         $("div#topbar").fadeIn();
+         });*/
+
+        /* Hide topbar on mouse leave */
+        /*$("div#topbar").mouseleave(function(){
+         $("div#topbar").fadeOut();
+         });*/
+
+        /* Show/hide topbar on click */
+        $("div#qrcode").click(function(){
+            $("div#topbar").fadeToggle();
+        });
+
+        /* Show topbar on scroll and hide on the top */
+        $(window).scroll(function(){
+            if ($(window).scrollTop() > headHeight*4) {
+                $("div#topbar").fadeIn("slow");
+            } else {
+                $("div#topbar").fadeOut("slow");
+            }
+        });
+
+        $('a#top').click(function(){
+            $("html, body").animate({ scrollTop: 0 }, 600);
+            return false;
+        });;
+
+    });
+
+</script>-->
+</body>
+</html>
