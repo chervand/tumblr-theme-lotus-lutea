@@ -47,7 +47,7 @@ $(document).ready(function(){
         if ($("div#twitter").css("height") === twitHeight + "px") {
             $("div#twitter").animate({
                 height: $('div#tweets').height()
-            }, 1500 );
+            }, 1000 );
             $('#show-tweets-icon').animate({  marginTop: 180 }, {
                 step: function(now,fx) {
                     $(this).css('-o-transform','rotate('+now+'deg)');
@@ -55,12 +55,12 @@ $(document).ready(function(){
                     $(this).css('-moz-transform','rotate('+now+'deg)');
                     $(this).css('-webkit-transform','rotate('+now+'deg)');
                 },
-                duration: 1500
+                duration: 1000
             },'linear');
         } else {
             $("div#twitter").animate({
                 height: twitHeight + "px"
-            }, 1500 );
+            }, 1000 );
             $('#show-tweets-icon').animate({  marginTop: 0 }, {
                 step: function(now,fx) {
                     $(this).css('-o-transform','rotate('+now+'deg)');
@@ -68,7 +68,7 @@ $(document).ready(function(){
                     $(this).css('-moz-transform','rotate('+now+'deg)');
                     $(this).css('-webkit-transform','rotate('+now+'deg)');
                 },
-                duration: 1500
+                duration: 1000
             },'linear');
         }
     });
