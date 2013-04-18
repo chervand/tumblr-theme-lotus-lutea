@@ -1,12 +1,20 @@
-<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
-<html xmlns='http://www.w3.org/1999/xhtml'>
+<!DOCTYPE html>
+<html>
 <head>
+
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <title>13 tweets</title>
     <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300italic,700&subset=latin,cyrillic-ext' rel='stylesheet' type='text/css'>
+
     <style type='text/css'>
+
+        /* Default colors
+            Link: #6699cc
+            Theme: #ffffaa
+            Text: #424242 */
+
         body {
-            background-color:#fff;
+            background-color:#ffffff;
             font-size:14pt;
             font-family: 'Open Sans Condensed', sans-serif;
             line-height:140%;
@@ -33,9 +41,9 @@
         }
         div#go {
             float:right;
-            background: yellow;
-            width: 100px;
-            opacity: 0.5;
+            background: #ffffaa;
+            width: 90px;
+            opacity: .5;
             height: 100%;
             z-index: 5;
             position: absolute;
@@ -46,23 +54,10 @@
         }
 
         #show-tweets-icon {
-            margin: auto;
+            height: 90px;
+            margin-top: 0;
         }
-        p.rotate {
-            right: -70px;
-            top: -50px;
-            position: absolute;
-            font-size: 3.2em;
-            /* Rotate from top left corner (not default) */
-            -webkit-transform-origin: 0 0;
-            -moz-transform-origin:    0 0;
-            -ms-transform-origin:     0 0;
-            -o-transform-origin:      0 0;
-            -webkit-transform: rotate(90deg);
-            -moz-transform:    rotate(90deg);
-            -ms-transform:     rotate(90deg);
-            -o-transform:      rotate(90deg);
-        }
+
         div#content {
             text-align: center;
             margin: 10px;
@@ -94,7 +89,7 @@
             width: 300px;
             height: 108px;
             /*border: solid 1px yellow;*/
-            color: yellow;
+            color: #ffffaa;
             /*font-size: 0.8em;*/
             overflow: hidden;
             float: left;
@@ -114,7 +109,7 @@
         }
         a#top:hover{
             text-decoration: underline;
-            color: yellow;
+            color: #ffffaa;
             opacity: .9;
         }
 
@@ -177,20 +172,19 @@
     <h1>13 tweets | 13 твитов</h1>
     <div id="twitter">
         <div id="go">
-            <!--<p class="rotate">Show</p>-->
             <div id="show-tweets-icon">
                 <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
-                    <path   d="M 0,0 50,50 100,0"
-                            style="
-                            fill:none;
-                            stroke:#000000;
-                            stroke-width:30;
-                            stroke-linecap:butt;
-                            stroke-linejoin:miter;
-                            stroke-miterlimit:4;
-                            stroke-opacity:1;
-                            stroke-dasharray:none;"
-                            transform="scale(.50)" ></path>
+                    <path   id="asd"
+                            d="M 30,20 45,35 60,20"
+                            fill="none"
+                            stroke="#000000"
+                            stroke-width="2"
+                            stroke-linecap="butt"
+                            stroke-linejoin="miter"
+                            stroke-miterlimit="4"
+                            stroke-opacity="1"
+                            stroke-dasharray="none"
+                            ></path>
                 </svg>
             </div>
         </div>
@@ -198,7 +192,7 @@
             <script type="text/javascript">
                 for (var i = 13; i >= 1; i--) {
                     document.write("<div class='tweet'>This is a sample tweet extended text which has a number " + i + ". Some extra words making line longer #hashtag.</div>");
-                };
+                }
             </script>
         </div>
     </div>
@@ -237,101 +231,5 @@
 <script src="http://code.jquery.com/jquery-latest.js"></script>
 <script src="script.js"></script>
 
-<!--<script type="text/javascript">
-
-    $(document).ready(function(){
-
-        /* Initial height of the tweets block */
-        var twitHeight = $("div#twitter").height();
-
-        /* Initial height of the topbar block */
-        var headHeight = $("div#topbar").height();
-
-        /* Initial height of the topbar block */
-        var wrapWidth = $('div#wrapper').width();
-
-        /* Initial width of the QR Code block */
-        var qrWidth = $('div#qrcode').width();
-
-        /* Initial padding-top of the body */
-        var bodyPad = parseInt($('body').css('padding-top'));
-
-        /*if (window.console) {
-         console.log('QR Width: ' + qrWidth);
-         }*/
-
-        /*$('div#cloud').tumblrTagCloud({url: 'http://username.tumblr.com'});*/
-
-        /* Change padding-top for the body on the widow width change */
-        function fitBody() {
-            if ($(window).width() < wrapWidth+(qrWidth*2) && $('body').css('padding-top') === bodyPad + 'px') {
-                $('body').animate({
-                    paddingTop: qrWidth + bodyPad
-                });
-            } else if ($(window).width() >= wrapWidth+(qrWidth*2) && $('body').css('padding-top') === bodyPad + qrWidth + 'px') {
-                $('body').animate({
-                    paddingTop: bodyPad
-                });
-
-            }
-        }
-        fitBody();
-        $(window).resize(fitBody);
-
-        /* Extend tweets block to the auto height and back */
-        $("#go").click(function(){
-            if ($("div#twitter").css("height") === twitHeight + "px") {
-                $("div#twitter").animate({
-                    height: $('div#tweets').height()
-                }, 1500 );
-            } else {
-                $("div#twitter").animate({
-                    height: twitHeight + "px"
-                }, 1500 );
-            }
-        });
-
-        /* Show/hide "Show more tweets" button on hover */
-        $("div#twitter").hover( /* Read about hover method */
-                function(){
-                    $("div#go").fadeIn("fast");
-                },
-                function(){
-                    $("div#go").fadeOut("fast");
-                }
-        );
-
-        /* Show topbar on mouse enter the QR */
-        /*$("div#qrcode").mouseenter(function(){
-         $("div#topbar").fadeIn();
-         });*/
-
-        /* Hide topbar on mouse leave */
-        /*$("div#topbar").mouseleave(function(){
-         $("div#topbar").fadeOut();
-         });*/
-
-        /* Show/hide topbar on click */
-        $("div#qrcode").click(function(){
-            $("div#topbar").fadeToggle();
-        });
-
-        /* Show topbar on scroll and hide on the top */
-        $(window).scroll(function(){
-            if ($(window).scrollTop() > headHeight*4) {
-                $("div#topbar").fadeIn("slow");
-            } else {
-                $("div#topbar").fadeOut("slow");
-            }
-        });
-
-        $('a#top').click(function(){
-            $("html, body").animate({ scrollTop: 0 }, 600);
-            return false;
-        });;
-
-    });
-
-</script>-->
 </body>
 </html>

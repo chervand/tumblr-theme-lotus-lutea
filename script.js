@@ -40,22 +40,42 @@ $(document).ready(function(){
     fitBody();
     $(window).resize(fitBody);
 
-    /* Extend tweets block to the auto height and back */
+    /**
+     * Extend tweets block to the auto height and back
+     */
     $("#go").click(function(){
         if ($("div#twitter").css("height") === twitHeight + "px") {
             $("div#twitter").animate({
                 height: $('div#tweets').height()
             }, 1500 );
-            $("div#showMore").replaceWith('<div id="showMore">Less</div>');
+            $('#show-tweets-icon').animate({  marginTop: 180 }, {
+                step: function(now,fx) {
+                    $(this).css('-o-transform','rotate('+now+'deg)');
+                    $(this).css('-ms-transform','rotate('+now+'deg)');
+                    $(this).css('-moz-transform','rotate('+now+'deg)');
+                    $(this).css('-webkit-transform','rotate('+now+'deg)');
+                },
+                duration: 1500
+            },'linear');
         } else {
             $("div#twitter").animate({
                 height: twitHeight + "px"
             }, 1500 );
-            $("div#showMore").replaceWith('<div id="showMore">More</div>');
+            $('#show-tweets-icon').animate({  marginTop: 0 }, {
+                step: function(now,fx) {
+                    $(this).css('-o-transform','rotate('+now+'deg)');
+                    $(this).css('-ms-transform','rotate('+now+'deg)');
+                    $(this).css('-moz-transform','rotate('+now+'deg)');
+                    $(this).css('-webkit-transform','rotate('+now+'deg)');
+                },
+                duration: 1500
+            },'linear');
         }
     });
 
-    /* Show/hide "Show more tweets" button on hover */
+    /**
+     * Show/hide "Show more tweets" button on hover
+     */
     $("div#twitter").hover( /* Read about hover method */
         function(){
             $("div#go").fadeIn("fast");

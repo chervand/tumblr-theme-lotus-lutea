@@ -6,117 +6,117 @@ by chervand.tumblr.com 2013
 <!DOCTYPE html>
 <html>
 <head>
-  
-  <!-- DEFAULT THEME VARIABLES -->
-  <meta name="color:Theme" content="#ffffc0" />
-  <meta name="color:Text" content="#424242" />
-  <meta name="color:Link" content="#6699cc" />
 
-  <!-- USERNAMES -->
-  <meta name="text:Facebook Username" content="" />
-  <meta name="text:Twitter Username" content="" />
-  <meta name="text:Soundcloud Username" content="" />
-  <meta name="text:Youtube Username" content="" />
-  <meta name="text:Github Username" content="" />
+<!-- DEFAULT THEME VARIABLES -->
+<meta name="color:Theme" content="#ffffc0" />
+<meta name="color:Text" content="#424242" />
+<meta name="color:Link" content="#6699cc" />
 
-  <meta name='description' content='{MetaDescription}' />
+<!-- USERNAMES -->
+<meta name="text:Facebook Username" content="" />
+<meta name="text:Twitter Username" content="" />
+<meta name="text:Soundcloud Username" content="" />
+<meta name="text:Youtube Username" content="" />
+<meta name="text:Github Username" content="" />
 
-  <title>{Title}</title>
+<meta name='description' content='{MetaDescription}' />
 
-  <link rel='icon' href='{Favicon}' />
-  <link rel='shortcut icon' href='{Favicon}' />
-  <link rel='alternate' type='application/rss+xml' href='{RSS}' />
-  <link rel="stylesheet" type="text/css" href="http://twitter.github.com/bootstrap/1.4.0/bootstrap.min.css" />
-  <link rel="stylesheet" type="text/css" href="https://raw.github.com/chervand/tumblr-theme-lotus-lutea/master/style.css" />
-  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300italic,700&subset=latin,cyrillic-ext" />
-  
-  <style type="text/css">
+<title>{Title}</title>
 
-  /* Post block styles */ 
-  .postInfo {
+<link rel='icon' href='{Favicon}' />
+<link rel='shortcut icon' href='{Favicon}' />
+<link rel='alternate' type='application/rss+xml' href='{RSS}' />
+<link rel="stylesheet" type="text/css" href="http://twitter.github.com/bootstrap/1.4.0/bootstrap.min.css" />
+<link rel="stylesheet" type="text/css" href="https://raw.github.com/chervand/tumblr-theme-lotus-lutea/master/style.css" />
+<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300italic,700&subset=latin,cyrillic-ext" />
+
+<style type="text/css">
+
+    /* Post block styles */
+.postInfo {
     width: 140px;
     float: right;
     padding: 8px;
-  }
-  .postInfo a,
-  .postInfo a:hover {
+}
+.postInfo a,
+.postInfo a:hover {
     color:#424242;
     font-size: 1.4em;
-  }
-  .postInfo span,
-  .postInfo span a,
-  .postInfo span a:hover {
+}
+.postInfo span,
+.postInfo span a,
+.postInfo span a:hover {
     color:#cecece;
-  }
-  .postWrapper {
+}
+.postWrapper {
     width:660px;
     float: right;
     margin:0 0 15px 0;
     border-right:5px solid #f8f8f8;
 
-  }
-  .postContainer {
+}
+.postContainer {
     border-right:1px solid #d7d7d7;
     border-bottom:1px solid #d7d7d7;
     min-height: 200px;
-  }
-  .post {
+}
+.post {
     padding:10px 10px 0 10px;
-  }
-  .post img {
+}
+.post img {
     width:640px;
     display: block;
     margin: auto;
-  }
-  .postTag {
+}
+.postTag {
     font-size: .8em !important;
-  }
-  .postNote {
+}
+.postNote {
     padding:10px;
-  }
-  .insideInfo {
+}
+.insideInfo {
     background:#f8f8f8;
     border-top:1px solid #eee;
     padding:5px 10px;
     font-size:0.8em;
     color:#888;
-  }
-  .insideInfo .postTags {
+}
+.insideInfo .postTags {
     width:350px;
     float:left;
-  }
-  .insideInfo .postTags a {
+}
+.insideInfo .postTags a {
     color:#aaa;
-  }
-  .insideInfo .postNotes {
+}
+.insideInfo .postNotes {
     width:150px;
     float:left;
     text-align:right;
-  }
-  p.quote {
+}
+p.quote {
     font-size:1.3em;
     margin:0 0 10px 0;
     border-left:4px solid #d7d7d7;
     padding:0 0 0 6px;
-  }
-  .chat {
+}
+.chat {
     margin:0 0 10px 0;
-  }
-  .chat td {
+}
+.chat td {
     padding:5px 8px;
-  }
-  .chat td.label {
+}
+.chat td.label {
     text-align:right;
     font-weight:bold;
-  }
-  .chat tr.odd td {
+}
+.chat tr.odd td {
     background:#f8f8f8;
     border-bottom:1px solid #eee;
-  }
-  .chat tr.even td {
+}
+.chat tr.even td {
     background:#fff;
-  }
-  .audio {
+}
+.audio {
     margin: auto;
     width:100%;
     border:1px solid #eee;
@@ -124,8 +124,8 @@ by chervand.tumblr.com 2013
     -moz-border-radius:5px;
     -webkit-border-radius:5px;
     background: #222; /* #f8f8f8; */
-  }
-  .audioLeft {
+}
+.audioLeft {
     width:48%;
     float:left;
     margin:5px;
@@ -135,8 +135,8 @@ by chervand.tumblr.com 2013
     -moz-border-radius:5px;
     -webkit-border-radius:5px;
     background:#fff;
-  }
-  .audioRight {
+}
+.audioRight {
     width:40%;
     float:left;
     margin: auto;
@@ -144,100 +144,101 @@ by chervand.tumblr.com 2013
     padding:13px 0;
     font-size:1.2em;
     color: #ddd;
-  }
-  .footer {
+}
+.footer {
     color:#cecece;
     padding:0 0 0 116px;
     font-size:0.8em;
     font-weight:bold;
-  }
-  .clear {
+}
+.clear {
     clear:both;
-  }
-  ol.notes,
-  ol.notes li {
+}
+ol.notes,
+ol.notes li {
     padding:0;
     margin:0;
     list-style-type:none;
-  }
-  ol.notes li.note {
+}
+ol.notes li.note {
     padding:2px 0;
     font-size:0.8em;
-  }
-  ol.notes li.note img.avatar {
+}
+ol.notes li.note img.avatar {
     vertical-align:-8px;
     margin-right:5px;
     width:16px;
     height:16px;
     padding:2px;
     border:1px solid #d7d7d7;
-  }
-  ol.notes li.note blockquote a {
+}
+ol.notes li.note blockquote a {
     text-decoration:none;
-  }
+}
 
-  .credits {
+.credits {
     float:right;
     text-align:right;
     padding:0 16px 0 0;
     font-weight:normal;
-  }
-  .content .span10 {
+}
+.content .span10 {
     width: 680px;
-  }
-  .fb-comments {
+}
+.fb-comments {
     margin-left: 105px;
-  }
+}
 
-  /* General template style */
-  ::selection {
+    /* General template style */
+::selection {
     background:#FFFFC0;
     color:#424242;
-  }
-  ::-moz-selection {
+}
+::-moz-selection {
     background:#FFFFC0;
     color:#424242;
-  }
-  * {
+}
+* {
     outline:none;
-  }
-  body {
+}
+body {
     background-color:#fff;
     font: 14pt 'Open Sans Condensed', sans-serif;
+    /* font: 11pt "Open Sans",Helvetica,Arial,sans-serif; */
     line-height:140%;
     color:#424242;
     margin: 0;
     padding-top: 30px;
-  }
-  a img {
+}
+a img {
     border:none;
-  }
-  a {
+}
+a {
     text-decoration:none;
-    color: {color:Link};
-  }
-  a:hover {
+color: {color:Link};
+    }
+a:hover {
     color:#424242;
-  }
-  h1 {
+}
+h1 {
     margin:0;
     padding:0 0 10px 0;
     font-size:2em;
-  }
-  h3 {
+}
+h3 {
     margin:0 0 8px 0;
     padding:0;
     font-size:1.1em;
-  }
-  p {
+}
+p {
     margin:10px 0;
     padding:0;
     font-size: 1em;
     line-height:140%;
-  }
+}
 
-  /* Header block style */
-  div#qrcode {
+    /* Header block style */
+div#qrcode {
     position: fixed;
     top: 0;
     left: 0;
@@ -246,8 +247,8 @@ by chervand.tumblr.com 2013
     width: 100px;
     height: 100px;
     cursor: pointer;
-  }
-  div.topbar {
+}
+div.topbar {
     width: 100%;
     height: 116px;
     background: #424242;
@@ -258,16 +259,16 @@ by chervand.tumblr.com 2013
     opacity: 0.95;
     overflow: auto;
     min-width: 940px;
-  }
-  div.topbar div.fill {
+}
+div.topbar div.fill {
     width: 100%;
     height: 116px;
     position: fixed;
     top: 0;
     z-index: 9;
-  }
+}
 
-  div#tagCloud {
+div#tagCloud {
     background: none;
     width: 300px;
     height: 108px;
@@ -277,30 +278,30 @@ by chervand.tumblr.com 2013
     margin-left: 116px;
     margin-top: 4px;
 
-  }
+}
 
-  div#tagCloud a {
+div#tagCloud a {
     text-decoration: none;
     -webkit-transition: all .18s ease-out;
     -moz-transition: all .18s ease-out;
     -ms-transition: all .18s ease-out;
     -o-transition: all .18s ease-out;
     transition: all .18s ease-out;
-    color: {color:Theme};
-  }
+color: {color:Theme};
+    }
 
-  div#tagCloud a:hover {
+div#tagCloud a:hover {
     text-decoration: underline;
-    color: {color:Link};
-  }
+color: {color:Link};
+    }
 
-  div#topscroll {
+div#topscroll {
     width: 116px;
     text-align: center;
     position: fixed;
     bottom: 20px;
-  }
-  a#top {
+}
+a#top {
     text-decoration: underline;
     color: white;
     opacity: .8;
@@ -310,51 +311,51 @@ by chervand.tumblr.com 2013
     -ms-transition: all .18s ease-out;
     -o-transition: all .18s ease-out;
     transition: all .18s ease-out;
-    color: {color:Link};
-  }
-  a#top:hover{
+color: {color:Link};
+    }
+a#top:hover{
     text-decoration: underline;
-    color: {color:Text};
-    font-size: .95em;
-    background: {color:Theme};
-    opacity: .95;
-  }
+color: {color:Text};
+font-size: .95em;
+background: {color:Theme};
+opacity: .95;
+    }
 
-  #header {
+#header {
     background:#f8f8f8;
     border-bottom:1px solid #eee;
     padding:15px 0;
     margin:0 0 20px 0;
-  }
-  #headerContent {
+}
+#headerContent {
     width:632px;
     margin:0 auto;
-  }
-  #headerContent h1 a {
+}
+#headerContent h1 a {
     color:#424242;
-  }
-  #headerContent h1,
-  #headerContent p {
+}
+#headerContent h1,
+#headerContent p {
     padding:0;
     margin:0;
-  }
-  #headerContent p {
+}
+#headerContent p {
     padding-top:10px;
-  }
+}
 
-  /* Grid style */
-  div#wrapper {
+    /* Grid style */
+div#wrapper {
     margin-left: auto;
     margin-right: auto;
     margin-top: 17px;
     /*width: 660px;*/
     padding-left: 20px;
     padding-right: 20px;
-  }
-  div.container {
+}
+div.container {
     width: 880px;
-  }
-  a.title {
+}
+a.title {
     font-size: 1.6em;
     text-decoration: underline;
     font-style: italic;
@@ -364,22 +365,22 @@ by chervand.tumblr.com 2013
     -ms-transition: all .18s ease-out;
     -o-transition: all .18s ease-out;
     transition: all .18s ease-out;
-    color: {color:Link};
-  }
+color: {color:Link};
+    }
 
-  a.title:hover {
-    color: {color:Text};
-    background: {color:Theme};
-  }
+a.title:hover {
+color: {color:Text};
+background: {color:Theme};
+    }
 
-  div#slogan {
+div#slogan {
     text-align: center;
     margin: 10px;
     font-size: 1.6em;
-  }
+}
 
-  /* Twitter block style */    
-  div#twitter {    
+    /* Twitter block style */
+div#twitter {
     overflow: hidden;
     position: relative; /* Hides absolute tweetpics */
     height: 120px;
@@ -387,30 +388,30 @@ by chervand.tumblr.com 2013
     font-size: .9em;
     display: block;
     /*border-bottom: solid 1px {color:Text};*/
-  }
-  div#tweets {
+}
+div#tweets {
     height: auto;
-    color: {color:Text};
-  }
-  div.tweet {
+color: {color:Text};
+    }
+div.tweet {
     margin-bottom: 4px;
-  }
-  img.twitpic {
+}
+img.twitpic {
     width: 25px;
     opacity: 0.2;
     position: absolute;
-  }
-  img.twitpic:hover {
+}
+img.twitpic:hover {
     opacity: 1.0;
-  }
-  div.twittext {
+}
+div.twittext {
     margin-left: 25px;
-    color: {color:Text};
-  }
-  div#go {
+color: {color:Text};
+    }
+div#go {
     float:right;
     width: 90px;
-    opacity: 0.95;
+    opacity: .5;
     height: 100%;
     z-index: 5;
     position: absolute;
@@ -419,72 +420,78 @@ by chervand.tumblr.com 2013
     cursor: pointer;
     display: none;
     background: {color:Theme};
-  }
-  div#showMore {
-    /*right: -60px;*/
+    }
+
+#show-tweets-icon {
+    height: 90px;
+    margin-top: 0;
+}
+
+/*div#showMore {
+    *//*right: -60px;*//*
     top: 45px;
     position: absolute;
     font-size: 3.0em;
-    -webkit-transform: rotate(90deg); 
-    -moz-transform:    rotate(90deg); 
-    -ms-transform:     rotate(90deg); 
-    -o-transform:      rotate(90deg); 
-  }
+    -webkit-transform: rotate(90deg);
+    -moz-transform:    rotate(90deg);
+    -ms-transform:     rotate(90deg);
+    -o-transform:      rotate(90deg);
+}*/
 
-    div#footer {
-        text-align: center;
-        border-top: solid 1px #d7d7d7;
-        border-left: none !important;
-        border-right: none !important;
-        padding: 0 !important;
+div#footer {
+    text-align: center;
+    border-top: solid 1px #d7d7d7;
+    border-left: none !important;
+    border-right: none !important;
+    padding: 0 !important;
 
-    }
+}
 
-    div#footer .footer-info {
-        float: left;
-        width: 33.33%;
-        margin-top: 30px;
-        margin-bottom: 30px;
-        border-left: none !important;
-        border-right: none !important;
+div#footer .footer-info {
+    float: left;
+    width: 33.33%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border-left: none !important;
+    border-right: none !important;
 
-    }
+}
 
-    div#footer .footer-info dl {
-        list-style-type: none;
-        font-size: 0.8em;
+div#footer .footer-info dl {
+    list-style-type: none;
+    font-size: 0.8em;
 
-    }
+}
 
-    div#footer .footer-info dt {
-        text-align: center;
-        font-weight: bolder;
+div#footer .footer-info dt {
+    text-align: center;
+    font-weight: bolder;
 
-    }
-    div#footer .footer-info dd {
-        margin: 0;
+}
+div#footer .footer-info dd {
+    margin: 0;
 
-    }
+}
 
-/*    div#footer #copyright {
-        font-size: 0.8em;
+    /*    div#footer #copyright {
+            font-size: 0.8em;
 
-    }*/
+        }*/
 
-  /* Tumblr controls style*/
-  #tumblr_controls {
+    /* Tumblr controls style*/
+#tumblr_controls {
     z-index: 0 !important;
     /*position: fixed !important;
     top: 10px !important;
     right: 30px !important;*/
-  }
-  {CustomCSS}
-  </style>
+}
+{CustomCSS}
+</style>
 </head>
 
 <body>
 
-  <!--     <div id="fb-root"></div> -->
+<!--     <div id="fb-root"></div> -->
 <!-- Facebook coments
     <script>
     (function(d, s, id) {
@@ -497,19 +504,19 @@ by chervand.tumblr.com 2013
     </script>
   -->
 
-  <div id="qrcode">
+<div id="qrcode">
     <!-- <a href="/" title="{Title}"> -->
     <img src="http://api.qrserver.com/v1/create-qr-code/?data=http%3A%2F%2Fchervand.tumblr.com&size=100x100&color=424242"/>
     <!-- </a> -->
-  </div>
+</div>
 
-  <div class="topbar">
+<div class="topbar">
     <div class="fill">
-      <div id="tagCloud">
-<!--         music portfolio tumblr guitar css web design metal html5 jquery php paint your own enso 
-        prague djent euroblast it esoteric books javascript css3 shure gigabyte picks strings
-        extra words -->
-      </div>
+        <div id="tagCloud">
+            <!--         music portfolio tumblr guitar css web design metal html5 jquery php paint your own enso
+                    prague djent euroblast it esoteric books javascript css3 shure gigabyte picks strings
+                    extra words -->
+        </div>
 
         <!-- <div class="container">
             <a class="brand" href="/">{Title}</a>
@@ -521,72 +528,87 @@ by chervand.tumblr.com 2013
                 {/block:HasPages}
             </ul>
           </div> -->
-        </div>
-      </div>
-            <div id="topscroll">
-        <a href="#" id="top">Scroll to the top.</a>
-      </div>
+    </div>
+</div>
+<div id="topscroll">
+    <a href="#" id="top">Scroll to the top.</a>
+</div>
 
-      <div class="container">
-        <div class="content">
-          <a id="homeLink" class="title" href="/">home</a>
-           {block:IndexPage}
-          <a id="infoLink" class="title" href="#">info</a>
-         
-          <div class="page-header">                   
-            {block:Twitter}
-            <div id="twitter" >
-              <div id="go">
-                <div id="showMore">More</div>
-              </div>
-              <div id="tweets"></div>
+<div class="container">
+<div class="content">
+<a id="homeLink" class="title" href="/">home</a>
+{block:IndexPage}
+<a id="infoLink" class="title" href="#">info</a>
+
+<div class="page-header">
+    {block:Twitter}
+    <div id="twitter" >
+        <div id="go">
+            <!--<div id="showMore">More</div>-->
+            <div id="show-tweets-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+                    <path   id="asd"
+                            d="M 30,20 45,35 60,20"
+                            fill="none"
+                            stroke="#000000"
+                            stroke-width="2"
+                            stroke-linecap="butt"
+                            stroke-linejoin="miter"
+                            stroke-miterlimit="4"
+                            stroke-opacity="1"
+                            stroke-dasharray="none"
+                            ></path>
+                </svg>
             </div>
-            {/block:Twitter}
-          </div>
-          <!-- <div id="slogan">{text:Slogan}</div> -->
-          {/block:IndexPage}
-          
-          
-          <div id="wrapper"class="row">
-            <!-- <div id='wrapper'> -->
-            <div id='posts'>
+        </div>
+        <div id="tweets"></div>
+    </div>
+    {/block:Twitter}
+</div>
+<!-- <div id="slogan">{text:Slogan}</div> -->
+{/block:IndexPage}
 
-              {block:Posts}
 
-              <div class='postInfo'>
-                <a href='{Permalink}'>
-                  {ShortMonth} {DayOfMonth} {Year}
-                  <br />
-                  <span>{TimeAgo}</span>
-                </a>
-                                      {block:HasTags}
-                      <br /><br />
-                      {block:Tags}
-                      <a class="postTag" href='{TagURL}'>#{Tag}</a>
-                      {/block:Tags}
-                      {/block:HasTags}
-<!--                       <br /><br />
-                      <a href="{Permalink}" title="View entire page">{NoteCountWithLabel}</a> -->
-              </div>
+<div id="wrapper"class="row">
+    <!-- <div id='wrapper'> -->
+    <div id='posts'>
 
-              <div class='postWrapper'>
-                <div class='postContainer'>
-                  <div class='post'>
+        {block:Posts}
+
+        <div class='postInfo'>
+            <a href='{Permalink}'>
+                {ShortMonth} {DayOfMonth} {Year}
+                <br />
+                <span>{TimeAgo}</span>
+            </a>
+            {block:HasTags}
+            <br /><br />
+            {block:Tags}
+            <a class="postTag" href='{TagURL}'>#{Tag}</a>
+            {/block:Tags}
+            {/block:HasTags}
+            <!--                       <br /><br />
+                                  <a href="{Permalink}" title="View entire page">{NoteCountWithLabel}</a> -->
+        </div>
+
+        <div class='postWrapper'>
+            <div class='postContainer'>
+                <div class='post'>
                     {block:Text}
                     {block:Title}<h3>{Title}</h3>{/block:Title}
                     {Body}
                     {/block:Text}
-                    
+
                     {block:Photo}
                     {LinkOpenTag}<img src='{PhotoURL-HighRes}' alt='{PhotoAlt}'/>{LinkCloseTag}
                     {block:Caption}<p>{Caption}</p>{/block:Caption}
                     {/block:Photo}
-                    
+
                     {block:Photoset}
                     {Photoset-500}
                     {block:Caption}<p>{Caption}</p>{block:Caption}
                     {/block:Photoset}
-                    
+
                     {block:Quote}
                     <p class='quote'>"{Quote}"</p>
                     {block:Source}<p>{Source}</p>{/block:Source}
@@ -600,36 +622,36 @@ by chervand.tumblr.com 2013
                     {block:Chat}
                     {block:Title}<h3>{Title}</h3>{/block:Title}
                     <table cellpadding='0' cellspacing='0' width='100%' border='0' class='chat'>
-                      {block:Lines}
-                      <tr class='{Alt}'>
-                        {block:Label}
-                        <td class='label'>{Label}</td>
-                        {/block:Label}
-                        <td>{Line}</td>
-                      </tr>
-                      {/block:Lines}
+                        {block:Lines}
+                        <tr class='{Alt}'>
+                            {block:Label}
+                            <td class='label'>{Label}</td>
+                            {/block:Label}
+                            <td>{Line}</td>
+                        </tr>
+                        {/block:Lines}
                     </table>
                     {/block:Chat}
 
                     {block:Audio}
-                                        {block:AudioEmbed} 
-{AudioEmbed-640}
-                    {/block:AudioEmbed} 
-<!--                     {block:AlbumArt}
-                    <img src='{AlbumArtURL}' />
-                    <br class="clear" />
-                    <br class="clear" />
+                    {block:AudioEmbed}
+                    {AudioEmbed-640}
+                    {/block:AudioEmbed}
+                    <!--                     {block:AlbumArt}
+                                        <img src='{AlbumArtURL}' />
+                                        <br class="clear" />
+                                        <br class="clear" />
 
-                    {/block:AlbumArt}                            
-                    <div class='audio'>                                
-                      <div class='audioLeft'>
-                        {AudioPlayerWhite}
-                      </div>
-                      <div class='audioRight'>
-                        {FormattedPlayCount} Plays
-                      </div>
-                      <br class='clear' />
-                    </div> -->
+                                        {/block:AlbumArt}
+                                        <div class='audio'>
+                                          <div class='audioLeft'>
+                                            {AudioPlayerWhite}
+                                          </div>
+                                          <div class='audioRight'>
+                                            {FormattedPlayCount} Plays
+                                          </div>
+                                          <br class='clear' />
+                                        </div> -->
                     {block:Caption}<p>{Caption}</p>{/block:Caption}
                     {/block:Audio}
 
@@ -640,141 +662,141 @@ by chervand.tumblr.com 2013
                     {/block:Caption}
                     {/block:Video}
 
-                  </div>
-
-
-<!--                   <div class='insideInfo'>
-                    <div class='postTags'>
-                      Posted {TimeAgo}
-                      {block:HasTags}
-                      <br />
-                      {block:Tags}
-                      <a href='{TagURL}'>#{Tag}</a>
-                      {/block:Tags}
-                      {/block:HasTags}
-                    </div>
-                    <div class='postNotes'>
-                      <a href="{Permalink}" title="View entire page">{NoteCountWithLabel} | 
-                        <fb:comments-count href={Permalink}></fb:comments-count> comments</a>
-                      </div>
-                      <br class='clear' />
-                    </div> -->
-
-                  </div>
-                </div>
-                {block:PostNotes}
-                <div class='postInfo'>&nbsp;</div>
-                <div class='postWrapper'>
-                  <div class='postContainer'>
-                    <div class='postNote'>
-                      {block:Posts}
-                      {PostNotes}
-                      {/block:Posts}
-                    </div>
-                  </div>
-                </div>
-                {/block:PostNotes}
-                {block:PermalinkPage}
-                <div class="fb-comments" data-href="{Permalink}" data-num-posts="2" data-width="522" colorscheme="light"></div>
-                {/block:PermalinkPage}
-                {/block:Posts}
-
-
-
-
- {block:IndexPage}
-                <div class='footer'>
-<!--                   <div class='credits'>
-                    <a href='{RSS}'>{lang:RSS}</a> | <a href='/archive'>{lang:Archive}</a> | 
-                    Theme: <a href='http://www.tumblr.com/theme/6473'>Optimus</a>
-                  </div> -->
-                  {block:NextPage}
-                  <a href='{NextPage}'>&#171; {lang:Older}</a>
-                  {/block:NextPage}
-                  {block:PreviousPage}
-                  {block:NextPage}
-                  |
-                  {block:NextPage}
-                  {/block:PreviousPage}
-                  {block:PreviousPage}
-                  <a href='{PreviousPage}'>{lang:Newer} &#187;</a>
-                  {/block:PreviousPage}
                 </div>
 
 
+                <!--                   <div class='insideInfo'>
+                                    <div class='postTags'>
+                                      Posted {TimeAgo}
+                                      {block:HasTags}
+                                      <br />
+                                      {block:Tags}
+                                      <a href='{TagURL}'>#{Tag}</a>
+                                      {/block:Tags}
+                                      {/block:HasTags}
+                                    </div>
+                                    <div class='postNotes'>
+                                      <a href="{Permalink}" title="View entire page">{NoteCountWithLabel} |
+                                        <fb:comments-count href={Permalink}></fb:comments-count> comments</a>
+                                      </div>
+                                      <br class='clear' />
+                                    </div> -->
 
-              </div>
-              <!-- </div> -->
             </div>
+        </div>
+        {block:PostNotes}
+        <div class='postInfo'>&nbsp;</div>
+        <div class='postWrapper'>
+            <div class='postContainer'>
+                <div class='postNote'>
+                    {block:Posts}
+                    {PostNotes}
+                    {/block:Posts}
+                </div>
+            </div>
+        </div>
+        {/block:PostNotes}
+        {block:PermalinkPage}
+        <div class="fb-comments" data-href="{Permalink}" data-num-posts="2" data-width="522" colorscheme="light"></div>
+        {/block:PermalinkPage}
+        {/block:Posts}
+
+
+
+
+        {block:IndexPage}
+        <div class='footer'>
+            <!--                   <div class='credits'>
+                                <a href='{RSS}'>{lang:RSS}</a> | <a href='/archive'>{lang:Archive}</a> |
+                                Theme: <a href='http://www.tumblr.com/theme/6473'>Optimus</a>
+                              </div> -->
+            {block:NextPage}
+            <a href='{NextPage}'>&#171; {lang:Older}</a>
+            {/block:NextPage}
+            {block:PreviousPage}
+            {block:NextPage}
+            |
+            {block:NextPage}
+            {/block:PreviousPage}
+            {block:PreviousPage}
+            <a href='{PreviousPage}'>{lang:Newer} &#187;</a>
+            {/block:PreviousPage}
+        </div>
+
+
+
+    </div>
+    <!-- </div> -->
+</div>
 
 <!--             <div id="footer" style="text-align:center">
               <p>{Title}</p>
               <p>{Host}</p>
             </div> -->
-             
-            <div id="footer">
-            <div class="footer-info">
-                <dl>
-                    <dt>{lang:All of Tumblr}</dt>
-                    <dd><a href="/">{lang:Home}</a></dd>
-                    <dd><a href="/archive">{lang:Archive}</a></dd>
-                    <dd><a href="{RSS}">{lang:RSS}</a></dd>
-                </dl>
-            </div>
-            <div class="footer-info">
-                <dl>
-                    <dt>Contacts</dt>
-                    {block:IfFacebookUsername}
-                    <dd>
-                      <a href="http://www.facebook.com/{text:Facebook Username}">
-                        facebook.com/{text:Facebook Username}
-                      </a>
-                    </dd>
-                    {/block:IfFacebookUsername}
-                    {block:IfTwitterUsername}
-                    <dd>
-                      <a href="http://twitter.com/{text:Twitter Username}">
-                        twitter.com/{text:Twitter Username}
-                      </a>
-                    </dd>
-                    {block:IfTwitterUsername}
-                    {block:IfSoundcloudUsername}
-                    <dd>
-                      <a href="http://soundcloud.com/{text:Soundcloud Username}">
-                        soundcloud.com/{text:Soundcloud Username}
-                      </a>
-                    </dd>
-                    {block:IfSoundcloudUsername}
-                    {block:IfYoutubeUsername}
-                    <dd>
-                      <a href="http://www.youtube.com/user/{text:Youtube Username}">
-                        youtube.com/user/{text:Youtube Username}
-                      </a>
-                    </dd>
-                    {block:IfYoutubeUsername}
-                    {block:IfGithubUsername}
-                    <dd>
-                      <a href="https://github.com/{text:Github Username}">
-                        github.com/{text:Github Username}
-                      </a>
-                    </dd>
-                    {block:IfGithubUsername}
-                </dl>
-            </div>
-            <div class="footer-info">
-                <dl>
-                    <dt>{lang:About}</dt>
-                    <dd>{Title}</dd>
-                    <dd>Theme: Lotus Lutea v1.0beta</dd>
-                    <dd>{lang:Powered by Tumblr}</dd>
-                    <dd>&copy {Host}</dd>
-                </dl>
-            </div>
-            <!-- <span id="copyright">&copy username.tumblr.com</span> -->
-        </div>
-        {/block:IndexPage}
-          </div>
-        </div>
+
+<div id="footer">
+    <div class="footer-info">
+        <dl>
+            <dt>{lang:All of Tumblr}</dt>
+            <dd><a href="/">{lang:Home}</a></dd>
+            <dd><a href="/archive">{lang:Archive}</a></dd>
+            <dd><a href="{RSS}">{lang:RSS}</a></dd>
+        </dl>
+    </div>
+    <div class="footer-info">
+        <dl>
+            <dt>Contacts</dt>
+            {block:IfFacebookUsername}
+            <dd>
+                <a href="http://www.facebook.com/{text:Facebook Username}">
+                    facebook.com/{text:Facebook Username}
+                </a>
+            </dd>
+            {/block:IfFacebookUsername}
+            {block:IfTwitterUsername}
+            <dd>
+                <a href="http://twitter.com/{text:Twitter Username}">
+                    twitter.com/{text:Twitter Username}
+                </a>
+            </dd>
+            {block:IfTwitterUsername}
+            {block:IfSoundcloudUsername}
+            <dd>
+                <a href="http://soundcloud.com/{text:Soundcloud Username}">
+                    soundcloud.com/{text:Soundcloud Username}
+                </a>
+            </dd>
+            {block:IfSoundcloudUsername}
+            {block:IfYoutubeUsername}
+            <dd>
+                <a href="http://www.youtube.com/user/{text:Youtube Username}">
+                    youtube.com/user/{text:Youtube Username}
+                </a>
+            </dd>
+            {block:IfYoutubeUsername}
+            {block:IfGithubUsername}
+            <dd>
+                <a href="https://github.com/{text:Github Username}">
+                    github.com/{text:Github Username}
+                </a>
+            </dd>
+            {block:IfGithubUsername}
+        </dl>
+    </div>
+    <div class="footer-info">
+        <dl>
+            <dt>{lang:About}</dt>
+            <dd>{Title}</dd>
+            <dd>Theme: Lotus Lutea v1.0beta</dd>
+            <dd>{lang:Powered by Tumblr}</dd>
+            <dd>&copy {Host}</dd>
+        </dl>
+    </div>
+    <!-- <span id="copyright">&copy username.tumblr.com</span> -->
+</div>
+{/block:IndexPage}
+</div>
+</div>
 
 <!-- Scripts starting here -->
 <script src='//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js'></script>
@@ -785,18 +807,18 @@ by chervand.tumblr.com 2013
 <!-- TODO: Reneder selected jquery scripts only on Index page -->
 {block:Twitter}
 <script type="text/javascript">
-function recent_tweets(data) {
-  for (i=0; i<data.length; i++) {
-    document.getElementById("tweets").innerHTML =
-    document.getElementById("tweets").innerHTML + 
-    '<div class="tweet"> \
-    <a href="http://twitter.com/{TwitterUsername}/status/' + (data[i].id_str ? data[i].id_str : data[i].id) + '" title="Go to the Twitter" target="_blank"> \
+    function recent_tweets(data) {
+        for (i=0; i<data.length; i++) {
+            document.getElementById("tweets").innerHTML =
+                    document.getElementById("tweets").innerHTML +
+                            '<div class="tweet"> \
+                            <a href="http://twitter.com/{TwitterUsername}/status/' + (data[i].id_str ? data[i].id_str : data[i].id) + '" title="Go to the Twitter" target="_blank"> \
     <img src="https://twitter.com/images/resources/twitter-bird-light-bgs.png" class="twitpic"/> \
     <div class="twittext">' + data[i].text + '</div> \
     </a> \
     </div>';
-  }
-}
+        }
+    }
 </script>
 <script type="text/javascript" src="/tweets.js"></script>
 {/block:Twitter}
