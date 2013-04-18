@@ -32,6 +32,61 @@ by chervand.tumblr.com 2013
 
 <style type="text/css">
 
+/* TEMPLATE DEFAULT COLORS {Link: #6699cc; Theme: #ffffaa; Text: #424242;} */
+
+body {
+    background-color:#fff;
+    font: 14pt 'Open Sans Condensed', sans-serif;
+    line-height:140%;
+    color:#424242;
+    margin: 0;
+    /*padding-top: 30px;*/
+}
+
+
+/* SIDEBAR */
+
+div.sidebar {
+    background-color: #242424;
+    /*border: solid 1px black;*/
+    width: 116px;
+    height: 1000px;
+    float: left;
+    position: fixed;
+    display: block;
+}
+
+div#qrcode {
+    /*position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;*/
+    margin: 8px;
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+}
+
+
+/* CONTAINER */
+
+div.container {
+    width: 880px;
+    /*border: solid 1px black;*/
+    margin-left:120px;
+    float:left;
+}
+
+div#wrapper {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 17px;
+    /*width: 660px;*/
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+
     /* Post block styles */
 .postInfo {
     width: 140px;
@@ -201,15 +256,7 @@ ol.notes li.note blockquote a {
 * {
     outline:none;
 }
-body {
-    background-color:#fff;
-    font: 14pt 'Open Sans Condensed', sans-serif;
-    /* font: 11pt "Open Sans",Helvetica,Arial,sans-serif; */
-    line-height:140%;
-    color:#424242;
-    margin: 0;
-    padding-top: 30px;
-}
+
 a img {
     border:none;
 }
@@ -237,17 +284,13 @@ p {
     line-height:140%;
 }
 
+
+
+
+
+
     /* Header block style */
-div#qrcode {
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 10;
-    margin: 8px;
-    width: 100px;
-    height: 100px;
-    cursor: pointer;
-}
+
 div.topbar {
     width: 100%;
     height: 116px;
@@ -344,17 +387,7 @@ opacity: .95;
 }
 
     /* Grid style */
-div#wrapper {
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 17px;
-    /*width: 660px;*/
-    padding-left: 20px;
-    padding-right: 20px;
-}
-div.container {
-    width: 880px;
-}
+
 a.title {
     font-size: 1.6em;
     text-decoration: underline;
@@ -379,64 +412,62 @@ div#slogan {
     font-size: 1.6em;
 }
 
-    /* Twitter block style */
-div#twitter {
-    overflow: hidden;
-    position: relative; /* Hides absolute tweetpics */
-    height: 120px;
-    padding: 5px;
-    font-size: .9em;
-    display: block;
-    /*border-bottom: solid 1px {color:Text};*/
-}
-div#tweets {
-    height: auto;
-color: {color:Text};
-    }
-div.tweet {
-    margin-bottom: 4px;
-}
-img.twitpic {
-    width: 25px;
-    opacity: 0.2;
-    position: absolute;
-}
-img.twitpic:hover {
-    opacity: 1.0;
-}
-div.twittext {
-    margin-left: 25px;
-color: {color:Text};
-    }
-div#go {
-    float:right;
-    width: 90px;
-    opacity: .5;
-    height: 100%;
-    z-index: 5;
-    position: absolute;
-    right: 0;
-    top: 0;
-    cursor: pointer;
-    display: none;
-    background: {color:Theme};
+    /* CONTAINER-TWITTER */
+
+    div#twitter {
+        overflow: hidden;
+        position: relative; /* Hides absolute tweet pics */
+        height: 84px;
+        padding: 12px;
+        font-size: .9em;
+        display: block;
     }
 
-#show-tweets-icon {
-    height: 90px;
-    margin-top: 0;
-}
+    div#tweets {
+        height: auto;
+        color: {color:Text};
+    }
 
-/*div#showMore {
-    *//*right: -60px;*//*
-    top: 45px;
-    position: absolute;
-    font-size: 3.0em;
-    -webkit-transform: rotate(90deg);
-    -moz-transform:    rotate(90deg);
-    -ms-transform:     rotate(90deg);
-    -o-transform:      rotate(90deg);
-}*/
+    div.tweet {
+        margin-bottom: 4px;
+    }
+
+    img.twitpic {
+        width: 25px;
+        opacity: 0.2;
+        position: absolute;
+    }
+
+    img.twitpic:hover {
+        opacity: 1.0;
+    }
+
+    div.twittext {
+        margin-left: 25px;
+        color: {color:Text};
+    }
+
+    div#go {
+        float:right;
+        width: 90px;
+        opacity: .5;
+        height: 100%;
+        z-index: 5;
+        position: absolute;
+        right: 0;
+        top: 0;
+        cursor: pointer;
+        display: none;
+        background: {color:Theme};
+    }
+
+    #show-tweets-icon {
+        height: 90px;
+        margin-top: 0;
+    }
+
+
+    /* FOOTER */
 
 div#footer {
     text-align: center;
@@ -504,21 +535,24 @@ div#footer .footer-info dd {
     </script>
   -->
 
-<div id="qrcode">
-    <!-- <a href="/" title="{Title}"> -->
-    <img src="http://api.qrserver.com/v1/create-qr-code/?data=http%3A%2F%2Fchervand.tumblr.com&size=100x100&color=424242"/>
-    <!-- </a> -->
+<div class="sidebar">
+    <div id="qrcode">
+        <!-- <a href="/" title="{Title}"> -->
+        <img src="http://api.qrserver.com/v1/create-qr-code/?data=http%3A%2F%2Fchervand.tumblr.com&size=100x100&color=424242"/>
+        <!-- </a> -->
+    </div>
 </div>
 
+<!--
 <div class="topbar">
     <div class="fill">
         <div id="tagCloud">
-            <!--         music portfolio tumblr guitar css web design metal html5 jquery php paint your own enso
+            &lt;!&ndash;         music portfolio tumblr guitar css web design metal html5 jquery php paint your own enso
                     prague djent euroblast it esoteric books javascript css3 shure gigabyte picks strings
-                    extra words -->
+                    extra words &ndash;&gt;
         </div>
 
-        <!-- <div class="container">
+        &lt;!&ndash; <div class="container">
             <a class="brand" href="/">{Title}</a>
             <ul class="nav">
                 {block:HasPages} 
@@ -527,18 +561,19 @@ div#footer .footer-info dd {
                     {/block:Pages}
                 {/block:HasPages}
             </ul>
-          </div> -->
+          </div> &ndash;&gt;
     </div>
 </div>
 <div id="topscroll">
     <a href="#" id="top">Scroll to the top.</a>
 </div>
+-->
 
 <div class="container">
 <div class="content">
-<a id="homeLink" class="title" href="/">home</a>
+<!--<a id="homeLink" class="title" href="/">home</a>-->
 {block:IndexPage}
-<a id="infoLink" class="title" href="#">info</a>
+<!--<a id="infoLink" class="title" href="#">info</a>-->
 
 <div class="page-header">
     {block:Twitter}

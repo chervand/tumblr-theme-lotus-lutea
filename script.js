@@ -37,8 +37,8 @@ $(document).ready(function(){
 
         }
     }
-    fitBody();
-    $(window).resize(fitBody);
+    //fitBody();
+    //$(window).resize(fitBody);
 
     /**
      * Extend tweets block to the auto height and back
